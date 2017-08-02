@@ -1,0 +1,53 @@
+% 
+% bqrm模板的参数
+%  - istwoside：	使用单页还是双页，如果双面“twoside”
+%  - iszh：		使用中文环境还是英文环境，如果中文“zh”
+%  - iscommented：	是否显示有可能的批注，如需要“commented”
+% 
+% version 1.0
+% 
+% 2017/07/20 19:56:13
+% 
+\documentclass[oneside, zh, commented]{bqrm}
+
+% 目录与索引
+\makeindex
+
+\begin{document}
+
+% 封面
+\frontmatter
+\input{body/cover}
+\makecover
+
+% 插入目录
+\tableofcontents
+
+% 正文开始
+\mainmatter
+
+% 此处添加正文章节
+\include{body/Ch01}
+\include{body/Ch02}
+\include{body/Ch03}
+
+% 附录开始
+\begin{appendix}
+
+% 修改附录的编号从字母开始
+\renewcommand{\thefigure}{\Alph{chapter}-\arabic{figure}}
+\renewcommand{\thetable}{\Alph{chapter}-\arabic{table}}
+\renewcommand{\theequation}{\Alph{chapter}-\arabic{equation}}
+% 修改附录的编号从字母开始
+
+% 此处添加附录
+\include{body/appendix01}
+\include{body/appendix02}
+\include{body/appendix03}
+
+\end{appendix}
+
+% 通常在 CJK 中文解决方案中加一个 \clearpage 在环境末尾
+\clearpage
+
+\end{document}
