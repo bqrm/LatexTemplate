@@ -89,7 +89,7 @@
 % 图形宏包
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
-\DeclareGraphicsExtensions{.png, .jpg, .gif, .pdf, .eps, .mps}
+\DeclareGraphicsExtensions{.png, .png, .gif, .pdf, .eps, .mps}
 \graphicspath{{figure/}}
 
 % 设置字体
@@ -133,8 +133,7 @@
 \RequirePackage{tabularx}
 
 % assumption
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
+\RequirePackage{amsmath,amssymb}
 
 % 代码宏包
 \RequirePackage{listings}
@@ -184,6 +183,7 @@
 \renewcommand{\sfdefault}{phv}
 \renewcommand{\rmdefault}{ptm}
 \renewcommand{\ttdefault}{pcr}
+
 
 % 定制中文文档的相关变化
 \ifbqrm@iszh
@@ -250,7 +250,71 @@
 	\titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \heiti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	\titlecontents{section}[2em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}	
-
+	
+\else
+	
+	\renewcommand\contentsname{Contents}
+	
+	% 定公式、图、表编号为"1.1"的形式，子图和子表的应用序号外加小括号，1.1(a)
+	\renewcommand\theequation{\arabic{chapter}.\arabic{equation}}
+	\renewcommand\thefigure{\arabic{chapter}.\arabic{figure}}
+	\renewcommand\thetable{\arabic{chapter}.\arabic{table}}
+	
+	% 重命名标题头
+	\newtheorem{proof}{Proof}
+	\newtheorem{assumption}{Assumption}[chapter]
+	\newtheorem{definition}{Definition}[chapter]
+	\newtheorem{proposition}{Proposition}[chapter]
+	\newtheorem{lemma}{Lemma}[chapter]
+	\newtheorem{theorem}{Theorem}[chapter]
+	\newtheorem{axiom}{Axiom}[chapter]
+	\newtheorem{corollary}{Corollary}[chapter]
+	\newtheorem{exercise}{Exercise}[chapter]
+	\newtheorem{example}{Example}[chapter]
+	\newtheorem{remark}{Remark}[chapter]
+	\newtheorem{problem}{Problem}[chapter]
+	\newtheorem{conjecture}{Conjecture}[chapter]
+	\renewcommand{\lstlistingname}{Code}
+	\renewcommand\listfigurename{Index of Figures}
+	\renewcommand\listtablename{Index of Tables}
+	\newcommand\listequationname{Index of Equations}
+	\newcommand\equationname{Equation}
+	\renewcommand\bibname{Reference}
+	\renewcommand\indexname{Index}
+	\renewcommand\figurename{Figure}
+	\renewcommand\tablename{Table}
+	
+	% 设置章节名格式
+	\CTEXsetup
+	[
+		number		= {\arabic{chapter}},
+		name		= {},
+		nameformat	= {\bfseries\centering\zihao{-2}},
+		titleformat	= {\bfseries\zihao{-2}},
+		afterskip	= {30pt},
+		beforeskip	= {10pt}
+	]{chapter}
+	\CTEXsetup
+	[
+		nameformat	= {\bfseries\zihao{3}},
+		titleformat	= {\bfseries\zihao{3}},
+		format		= {\Large\bfseries}
+	]{section}
+	\CTEXsetup
+	[
+		nameformat={\bfseries\zihao{4}},
+		titleformat={\bfseries\zihao{4}}
+	]{subsection}
+	\CTEXsetup
+	[
+		nameformat={\bfseries\zihao{-4}},
+		titleformat={\bfseries\zihao{-4}}
+	]{subsubsection}
+	
+	\titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \heiti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
+	\titlecontents{section}[2em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
+	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}	
+	
 \fi
 
 % 生成封面
@@ -283,7 +347,7 @@
 		\vfill
 		
 		\begin{figure}[H]
-			\includegraphics[height=2em]{\bqrm@logoname}
+			\includegraphics[height=4em]{\bqrm@logoname}
 		\end{figure}
 		
 		\vskip-15pt
@@ -294,30 +358,8 @@
 
 % 
 \RequirePackage{enumerate}
-\RequirePackage{enumitem}
-\setenumerate[1]
-{
-	itemsep=-5pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=0pt
-}
-\setitemize[1]
-{
-	itemsep=0pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=5pt
-}
-\setdescription
-{
-	itemsep=0pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=5pt
-}
 
-% 
+%
 \RequirePackage{appendix}
 
 % 自定义宏包
