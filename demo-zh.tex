@@ -4,9 +4,9 @@
 %  - iszh：		使用中文环境还是英文环境，如果中文“zh”
 %  - iscommented：	是否显示有可能的批注，如需要“commented”
 % 
-% version 1.0
+% version 1.1
 % 
-% 2017/07/20 19:56:13
+% 2017/09/29
 % 
 \documentclass[oneside, zh, commented]{bqrm}
 
@@ -28,20 +28,19 @@
 
 % 此处添加正文章节
 \include{body/Ch01}
+% 正文章节结束
 
 % 附录开始
 \begin{appendix}
 
-% 修改附录的编号从字母开始
-\renewcommand{\thefigure}{\Alph{chapter}-\arabic{figure}}
-\renewcommand{\thetable}{\Alph{chapter}-\arabic{table}}
-\renewcommand{\theequation}{\Alph{chapter}-\arabic{equation}}
-% 修改附录的编号从字母开始
+% 附录的图和代码编号从字母开始
+\changeappendexchapternumber
 
 % 此处添加附录
 %\include{body/appendix01}
 
 \end{appendix}
+% 附录结束
 
 % 通常在 CJK 中文解决方案中加一个 \clearpage 在环境末尾
 \clearpage
