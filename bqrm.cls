@@ -4,12 +4,12 @@
 % 
 % Copyright(C) 2017 by Tao Mingyang <bqrmtao@qq.com>
 % 
-% version 1.1
+% version 1.2
 %
 % 2017/09/29
 %
 
-\NeedsTeXFormat{LaTeX2e}[2017/07/20]
+\NeedsTeXFormat{LaTeX2e}[2017/09/29]
 \ProvidesClass{bqrm}
 
 \def\bqrmtao{BqrmTao}
@@ -184,6 +184,8 @@
 \renewcommand{\rmdefault}{ptm}
 \renewcommand{\ttdefault}{pcr}
 
+% 附录控制
+\RequirePackage{appendix}
 
 % 定制中文文档的相关变化
 \ifbqrm@iszh
@@ -234,22 +236,28 @@
 	[
 		nameformat	= {\bfseries\zihao{3}},
 		titleformat	= {\bfseries\zihao{3}},
-		format		= {\Large\bfseries}
+		format		= {\Large\bfseries} % 标题靠左
 	]{section}
 	\CTEXsetup
 	[
-		nameformat={\bfseries\zihao{4}},
-		titleformat={\bfseries\zihao{4}}
+		nameformat	= {\bfseries\zihao{4}},
+		titleformat	= {\bfseries\zihao{4}}
 	]{subsection}
 	\CTEXsetup
 	[
-		nameformat={\bfseries\zihao{-4}},
-		titleformat={\bfseries\zihao{-4}}
+		nameformat	= {\bfseries\zihao{-4}},
+		titleformat	= {\bfseries\zihao{-4}}
 	]{subsubsection}
+	% 设置附录格式
+	\CTEXsetup
+	[
+		number		= {\Alph{chapter}},
+		name		= {附录 {} {},},
+	]{appendix}
 	
 	\titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \heiti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	\titlecontents{section}[2em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
-	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}	
+	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	
 \else
 	
@@ -298,7 +306,7 @@
 	[
 		nameformat	= {\bfseries\zihao{3}},
 		titleformat	= {\bfseries\zihao{3}},
-		format		= {\Large\bfseries}
+		format		= {\Large\bfseries} % 标题靠左
 	]{section}
 	\CTEXsetup
 	[
@@ -310,11 +318,17 @@
 		nameformat={\bfseries\zihao{-4}},
 		titleformat={\bfseries\zihao{-4}}
 	]{subsubsection}
+	% 设置附录格式
+	\CTEXsetup
+	[
+		number		= {\Alph{chapter}},
+		name		= {Appendix {} {},},
+	]{appendix}
 	
 	\titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \heiti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	\titlecontents{section}[2em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}	
-	
+
 \fi
 
 % 生成封面
@@ -356,11 +370,21 @@
 	\end{titlepage}
 }
 
+\newcommand{\changeappendexchapternumber}
+{
+	\ifbqrm@iszh
+		\renewcommand{\thefigure}{\Alph{chapter}-\arabic{figure}}
+		\renewcommand{\thetable}{\Alph{chapter}-\arabic{table}}
+		\renewcommand{\theequation}{\Alph{chapter}-\arabic{equation}}
+	\else
+		\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}}
+		\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}
+		\renewcommand{\theequation}{\Alph{chapter}.\arabic{equation}}
+	\fi
+}
+
 % 
 \RequirePackage{enumerate}
-
-%
-\RequirePackage{appendix}
 
 % 自定义宏包
 \RequirePackage{bqrm}
