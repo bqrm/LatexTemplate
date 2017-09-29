@@ -4,9 +4,9 @@
 % 
 % Copyright(C) 2017 by Tao Mingyang <bqrmtao@qq.com>
 % 
-% version 1.0
+% version 1.1
 %
-% 2017/07/20
+% 2017/09/29
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/07/20]
