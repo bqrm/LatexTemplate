@@ -89,7 +89,7 @@
 % 图形宏包
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
-\DeclareGraphicsExtensions{.png, .png, .gif, .pdf, .eps, .mps}
+\DeclareGraphicsExtensions{.png, .jpg, .gif, .pdf, .eps, .mps}
 \graphicspath{{figure/}}
 
 % 设置字体
