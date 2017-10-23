@@ -6,7 +6,8 @@
 % 
 % version 1.3
 %
-% 2017/10/23
+% Create:	2017/09/29
+% Modified:	2017/10/23, colored href
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -114,13 +115,13 @@
 	bookmarksopen		= true,
 	bookmarksopenlevel	= 0,
 	breaklinks			= true,
-	colorlinks			= false,
+	colorlinks			= true,
 	plainpages			= false,
 	pdfpagelabels,
 	pdfborder			= 0 0 0,
-%	linkcolor			= blue,	%
-%	urlcolor			= blue,	%
-%	citecolor			= blue	%
+	linkcolor			= blue,	%
+	urlcolor			= blue,	%
+	citecolor			= blue	%
 }
 
 % 表格控制
