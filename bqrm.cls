@@ -4,9 +4,9 @@
 % 
 % Copyright(C) 2017 by Tao Mingyang <bqrmtao@qq.com>
 % 
-% version 1.2
+% version 1.3
 %
-% 2017/09/29
+% 2017/10/23
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -385,6 +385,28 @@
 
 % 
 \RequirePackage{enumerate}
+\RequirePackage{enumitem}
+\setenumerate[1]
+{
+	itemsep=-5pt,
+	partopsep=0pt,
+	parsep=\parskip,
+	topsep=0pt
+}
+\setitemize[1]
+{
+	itemsep=0pt,
+	partopsep=0pt,
+	parsep=\parskip,
+	topsep=5pt
+}
+\setdescription
+{
+	itemsep=0pt,
+	partopsep=0pt,
+	parsep=\parskip,
+	topsep=5pt
+}
 
 % 自定义宏包
 \RequirePackage{bqrm}
