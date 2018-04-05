@@ -1,13 +1,16 @@
 %
 % this file 'bqrm.cls' defines the detailed parameters of the template
-% compiled on MikTeX-2.9-X64, using 'pdfLaTeX+MakeIndex+BibTex'
+% compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
-% Copyright(C) 2017 by Tao Mingyang <bqrmtao@qq.com>
 % 
-% version 1.3
+% version:	1.3
 %
-% Create:	2017/09/29
+% Create:	2017/07/20
+% Modified:	2017/09/29
 % Modified:	2017/10/23, colored href
+% Modified:	2018/04/05, no page number of first page of chapter
+% 
+% Copyright(C) 2017 bqrmtao@qq.com
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -39,7 +42,9 @@
 		{\color{gray}#2}
 	}
 \fi
+
 \newcommand{\pozhehao}{\kern0.3ex\rule[0.8ex]{2em}{0.1ex}\kern0.3ex}
+
 % 文档格式控制
 \RequirePackage{geometry}
 \geometry
@@ -66,6 +71,13 @@
 	\fancyhead[C]{\rightmark}	
 \fi
 \fancyfoot[C]{\small {\bf\thepage}}	%页脚
+
+% 第一页页码为空
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+					\thispagestyle{empty}
+					\global\@topnum\z@
+					\@afterindentfalse
+					\secdef\@chapter\@schapter}
 
 % 设定目录格式
 \RequirePackage{titletoc}
@@ -119,9 +131,9 @@
 	plainpages			= false,
 	pdfpagelabels,
 	pdfborder			= 0 0 0,
-	linkcolor			= blue,	%
-	urlcolor			= blue,	%
-	citecolor			= blue	%
+	linkcolor			= black,%
+	urlcolor			= black,%
+	citecolor			= black	%
 }
 
 % 表格控制
@@ -143,7 +155,7 @@
 	tabsize				= 4 , %
 	%frame				= shadowbox,		%把代码用带有阴影的框圈起来
 	backgroundcolor		= \color{black!5},	%设置代码背景色
-	commentstyle		= \color{black!100},	%浅灰色的注释
+	commentstyle		= \color{black!100},%浅灰色的注释
 	rulesepcolor		= \color{red!20!green!20!blue!20},	%代码块边框为淡青色
 	keywordstyle		= \color{blue!}\bfseries,	%代码关键字的颜色为蓝色，粗体
 	showstringspaces	= true,			%显示代码字符串中间的空格标记
@@ -261,7 +273,7 @@
 	\titlecontents{subsection}[4em]{\songti \zihao{-4}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*{.}\contentspage}
 	
 \else
-	
+% 定制英文文档的相关变化
 	\renewcommand\contentsname{Contents}
 	
 	% 定公式、图、表编号为"1.1"的形式，子图和子表的应用序号外加小括号，1.1(a)
@@ -362,7 +374,7 @@
 		\vfill
 		
 		\begin{figure}[H]
-			\includegraphics[height=4em]{\bqrm@logoname}
+			\includegraphics[height=2em]{\bqrm@logoname}
 		\end{figure}
 		
 		\vskip-15pt
