@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.5
+% version:	1.6
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -11,6 +11,7 @@
 % Modified:	2018/04/05, no page number of first page of chapter
 % Modified:	2018/04/20, add support for gif
 % Modified:	2018/04/20, modify setenumerate, setitemize and setdescription
+% Modified:	2018/04/20, set depth of content to 4
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 %
@@ -83,6 +84,9 @@
 
 % 设定目录格式
 \RequirePackage{titletoc}
+
+% 设置目录深度
+\setcounter{secnumdepth}{4}
 
 % 文字加阴影
 \RequirePackage{framed}
