@@ -3,12 +3,13 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.3
+% version:	1.4
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
 % Modified:	2017/10/23, colored href
 % Modified:	2018/04/05, no page number of first page of chapter
+% Modified:	2018/04/20, add support for gif
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 %
@@ -104,6 +105,21 @@
 \RequirePackage{subfig}
 \DeclareGraphicsExtensions{.png, .jpg, .gif, .pdf, .eps, .mps}
 \graphicspath{{figure/}}
+
+% gif 图片，ImageMagick 转换成 png
+\usepackage{animate}
+% 将 \includegraphics 替换为以下命令
+% \animategraphics
+%    [autoplay,		% 自动播放
+%     loop,			% 循环播放
+%     controls,		% 控制条
+%     width=.7\textwidth,
+%     height=.7\textheight
+%    ]
+%    {4}			% 一秒播放几张
+%    {folder/ra-}	% 循环播放的 PNG 图片名前缀
+%    {0}			% 第一张图片的序号
+%    {3}			% 最后一张图片的序号
 
 % 设置字体
 %\RequirePackage{txfonts}
