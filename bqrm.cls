@@ -3,13 +3,14 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.4
+% version:	1.5
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
 % Modified:	2017/10/23, colored href
 % Modified:	2018/04/05, no page number of first page of chapter
 % Modified:	2018/04/20, add support for gif
+% Modified:	2018/04/20, modify setenumerate, setitemize and setdescription
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 %
@@ -417,24 +418,21 @@
 \RequirePackage{enumitem}
 \setenumerate[1]
 {
-	itemsep=-5pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=0pt
+	partopsep	=0pt,	% 好像无效
+	parsep		=0pt,	% item 之间的间隔
+	topsep		=10pt	% 整个结构与上一行的距离
 }
 \setitemize[1]
 {
-	itemsep=0pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=5pt
+	partopsep	=0pt,	% 好像无效
+	parsep		=0pt,	% item 之间的间隔
+	topsep		=10pt	% 整个结构与上一行的距离
 }
 \setdescription
 {
-	itemsep=0pt,
-	partopsep=0pt,
-	parsep=\parskip,
-	topsep=5pt
+	partopsep	=0pt,	% 好像无效
+	parsep		=0pt,	% item 之间的间隔
+	topsep		=10pt	% 整个结构与上一行的距离
 }
 
 % 自定义宏包
