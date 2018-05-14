@@ -442,7 +442,7 @@
 
 \RequirePackage{draftwatermark}
 \SetWatermarkText{BQRM}
-\SetWatermarkLightness{0.9}
+\SetWatermarkLightness{0.95}
 \SetWatermarkScale{1}
 \SetWatermarkAngle{60}
 
