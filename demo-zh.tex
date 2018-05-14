@@ -23,11 +23,13 @@
 \begin{document}
 
 % 封面
+\WatermarkOff
 \frontmatter
 \input{body/cover}
 \makecover
 
-\AddToShipoutPicture{\BackgroundPicture}
+% 插入水印
+\WatermarkOn
 
 % 插入目录
 \tableofcontents
@@ -50,6 +52,9 @@
 
 \end{appendix}
 % 附录结束
+
+% 取消水印
+\WatermarkOff
 
 \ClearShipoutPicture
 
