@@ -440,24 +440,20 @@
 	topsep		=10pt	% 整个结构与上一行的距离
 }
 
-\usepackage{tikz}
-\usepackage{eso-pic}
+\RequirePackage{draftwatermark}
+\SetWatermarkText{BQRM}
+\SetWatermarkLightness{0.9}
+\SetWatermarkScale{1}
+\SetWatermarkAngle{60}
 
-% 添加的水印图片
-\newcommand\BackgroundPicture
+\newcommand\WatermarkOn		% 添加水印
 {
-	\put(0,0)
-	{
-		\parbox[b][\paperheight]{\paperwidth}
-		{
-			\vfill
-			\centering
-			\begin{tikzpicture}[remember picture,overlay]
-				\node [rotate=60, scale=10, text opacity=0.2] at (current page.center) {bqrmtao};	% 水印内容
-			\end{tikzpicture}
-			\vfill
-		}
-	}
+	\@sc@wm@stamptrue
+}
+
+\newcommand\WatermarkOff	% 去除水印
+{
+	\@sc@wm@stampfalse
 }
 
 % 自定义宏包
