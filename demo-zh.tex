@@ -5,11 +5,12 @@
 %  - iscommented：	是否显示有可能的批注，如需要“commented”
 % 
 % 
-% version:	1.2
+% version:	1.3
 % 
 % Create:	2017/07/20
 % Modified:	2017/09/29
 % Modified:	2018/04/05
+% Modified:	2018/05/14, add watermark
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 % 
@@ -25,6 +26,8 @@
 \frontmatter
 \input{body/cover}
 \makecover
+
+\AddToShipoutPicture{\BackgroundPicture}
 
 % 插入目录
 \tableofcontents
@@ -47,6 +50,8 @@
 
 \end{appendix}
 % 附录结束
+
+\ClearShipoutPicture
 
 % 通常在 CJK 中文解决方案中加一个 \clearpage 在环境末尾
 \clearpage
