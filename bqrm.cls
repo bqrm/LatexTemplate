@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.6
+% version:	1.7
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -12,6 +12,7 @@
 % Modified:	2018/04/20, add support for gif
 % Modified:	2018/04/20, modify setenumerate, setitemize and setdescription
 % Modified:	2018/04/20, set depth of content to 4
+% Modified:	2018/05/14, add watermark
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 %
@@ -437,6 +438,26 @@
 	partopsep	=0pt,	% 好像无效
 	parsep		=0pt,	% item 之间的间隔
 	topsep		=10pt	% 整个结构与上一行的距离
+}
+
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+% 添加的水印图片
+\newcommand\BackgroundPicture
+{
+	\put(0,0)
+	{
+		\parbox[b][\paperheight]{\paperwidth}
+		{
+			\vfill
+			\centering
+			\begin{tikzpicture}[remember picture,overlay]
+				\node [rotate=60, scale=10, text opacity=0.2] at (current page.center) {bqrmtao};	% 水印内容
+			\end{tikzpicture}
+			\vfill
+		}
+	}
 }
 
 % 自定义宏包
