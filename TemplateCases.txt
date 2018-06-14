@@ -1,0 +1,32 @@
+{\color{blue}{\emph{  }}}
+
+ $$ 
+
+\begin{equation}
+\begin{aligned}
+\end{aligned}
+\end{equation}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+
+\begin{enumerate}
+\item 
+\item 
+\item 
+\end{enumerate}
+
+\begin{pmatrix}
+\end{pmatrix}
+
+\begin{bmatrix}
+\end{bmatrix}
+
+\begin{Vmatrix}
+\end{Vmatrix}
+
+\begin{cases}
+\end{cases}
