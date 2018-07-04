@@ -13,6 +13,7 @@
 % Modified:	2018/04/20, modify setenumerate, setitemize and setdescription
 % Modified:	2018/04/20, set depth of content to 4
 % Modified:	2018/05/14, add watermark
+% Modified:	2018/07/04, disable watermark by default
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 %
@@ -425,19 +426,19 @@
 {
 	partopsep	=0pt,	% 好像无效
 	parsep		=0pt,	% item 之间的间隔
-	topsep		=10pt	% 整个结构与上一行的距离
+	topsep		=5pt	% 整个结构与上一行的距离
 }
 \setitemize[1]
 {
 	partopsep	=0pt,	% 好像无效
 	parsep		=0pt,	% item 之间的间隔
-	topsep		=10pt	% 整个结构与上一行的距离
+	topsep		=5pt	% 整个结构与上一行的距离
 }
 \setdescription
 {
 	partopsep	=0pt,	% 好像无效
 	parsep		=0pt,	% item 之间的间隔
-	topsep		=10pt	% 整个结构与上一行的距离
+	topsep		=5pt	% 整个结构与上一行的距离
 }
 
 \RequirePackage{draftwatermark}
@@ -445,6 +446,7 @@
 \SetWatermarkLightness{0.95}
 \SetWatermarkScale{1}
 \SetWatermarkAngle{60}
+\@sc@wm@stampfalse			% 默认不显示水印
 
 \newcommand\WatermarkOn		% 添加水印
 {
