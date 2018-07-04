@@ -5,12 +5,13 @@
 %  - iscommented：	是否显示有可能的批注，如需要“commented”
 % 
 % 
-% version:	1.3
+% version:	1.4
 % 
 % Create:	2017/07/20
 % Modified:	2017/09/29
 % Modified:	2018/04/05
 % Modified:	2018/05/14, add watermark
+% Modified:	2018/07/04, adjust watermark and add introduction before table of contents
 % 
 % Copyright(C) 2017 bqrmtao@qq.com
 % 
@@ -23,13 +24,15 @@
 \begin{document}
 
 % 封面
-\WatermarkOff
 \frontmatter
 \input{body/cover}
 \makecover
 
 % 插入水印
 \WatermarkOn
+
+% 引言
+\include{body/Introduction}
 
 % 插入目录
 \tableofcontents
