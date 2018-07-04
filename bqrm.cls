@@ -424,21 +424,21 @@
 \RequirePackage{enumitem}
 \setenumerate[1]
 {
-	partopsep	=0pt,	% 好像无效
-	parsep		=0pt,	% item 之间的间隔
-	topsep		=5pt	% 整个结构与上一行的距离
+	partopsep	= 0pt,	% 好像无效
+	parsep		= 0pt,	% item 之间的间隔
+	topsep		= 5pt	% 整个结构与上一行的距离
 }
 \setitemize[1]
 {
-	partopsep	=0pt,	% 好像无效
-	parsep		=0pt,	% item 之间的间隔
-	topsep		=5pt	% 整个结构与上一行的距离
+	partopsep	= 0pt,	% 好像无效
+	parsep		= 0pt,	% item 之间的间隔
+	topsep		= 5pt	% 整个结构与上一行的距离
 }
 \setdescription
 {
-	partopsep	=0pt,	% 好像无效
-	parsep		=0pt,	% item 之间的间隔
-	topsep		=5pt	% 整个结构与上一行的距离
+	partopsep	= 0pt,	% 好像无效
+	parsep		= 0pt,	% item 之间的间隔
+	topsep		= 5pt	% 整个结构与上一行的距离
 }
 
 \RequirePackage{draftwatermark}
