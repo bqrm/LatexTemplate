@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.7
+% version:	1.8
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -14,8 +14,9 @@
 % Modified:	2018/04/20, set depth of content to 4
 % Modified:	2018/05/14, add watermark
 % Modified:	2018/07/04, disable watermark by default
+% Modified:	2018/07/27, revise header
 % 
-% Copyright(C) 2017 bqrmtao@qq.com
+% Copyright(C) 2017-2018 bqrmtao@qq.com
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -70,10 +71,11 @@
 \renewcommand{\footrulewidth}{0pt}
 \ifbqrm@istwoside
 	\renewcommand{\headrulewidth}{0pt}
-	\fancyhead[RE]{\leftmark}	% 左内侧
-	\fancyhead[LO]{\rightmark}	% 右内侧
+%	\renewcommand{\rightmark}{\thesection \; \chaptername}
+	\fancyhead[RE]{\protect \nouppercase \leftmark}		% even pages on right
+	\fancyhead[LO]{\protect \nouppercase \rightmark}	% odd pages on left
 \else
-	\fancyhead[C]{\rightmark}	
+	\fancyhead[C]{\protect \nouppercase \rightmark}	
 \fi
 \fancyfoot[C]{\small {\bf\thepage}}	%页脚
 
