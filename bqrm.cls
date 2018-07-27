@@ -72,7 +72,6 @@
 \renewcommand{\footrulewidth}{0pt}
 \ifbqrm@istwoside
 	\renewcommand{\headrulewidth}{0pt}
-%	\renewcommand{\rightmark}{\thesection \; \chaptername}
 	\fancyhead[RE]{\protect \nouppercase \leftmark}		% even pages on right
 	\fancyhead[LO]{\protect \nouppercase \rightmark}	% odd pages on left
 \else
