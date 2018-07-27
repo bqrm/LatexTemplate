@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.8
+% version:	1.9
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -15,6 +15,7 @@
 % Modified:	2018/05/14, add watermark
 % Modified:	2018/07/04, disable watermark by default
 % Modified:	2018/07/27, revise header
+% Modified:	2018/07/27, foot of first page of chapter
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -77,14 +78,14 @@
 \else
 	\fancyhead[C]{\protect \nouppercase \rightmark}	
 \fi
-\fancyfoot[C]{\small {\bf\thepage}}	%页脚
+\fancyfoot[C]{\thepage}	%页脚
 
 % 第一页页码为空
-\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
-					\thispagestyle{empty}
-					\global\@topnum\z@
-					\@afterindentfalse
-					\secdef\@chapter\@schapter}
+% \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+% 					\thispagestyle{empty}
+% 					\global\@topnum\z@
+% 					\@afterindentfalse
+% 					\secdef\@chapter\@schapter}
 
 % 设定目录格式
 \RequirePackage{titletoc}
