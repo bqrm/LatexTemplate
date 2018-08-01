@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.9
+% version:	1.10
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -16,6 +16,7 @@
 % Modified:	2018/07/04, disable watermark by default
 % Modified:	2018/07/27, revise header
 % Modified:	2018/07/27, foot of first page of chapter
+% Modified:	2018/08/01, set the linespacing of lstlisting
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -56,13 +57,13 @@
 \RequirePackage{geometry}
 \geometry
 {
-	top			= 3.5cm,	%面边距上
-	bottom		= 3.5cm,	%面边距下
-	left		= 3.5cm,	%面边距左
-	right		= 3.5cm, 	%面边距右
-	headheight	= 2.6cm,	%页眉
-	headsep		= 3mm,		%
-	footskip	= 13mm		%
+	top			= 3.5cm,	% 面边距上
+	bottom		= 3.5cm,	% 面边距下
+	left		= 3.5cm,	% 面边距左
+	right		= 3.5cm, 	% 面边距右
+	headheight	= 2.6cm,	% 页眉
+	headsep		= 3mm,		% 
+	footskip	= 13mm		% 
 }
 
 % 设置页眉页脚
@@ -75,9 +76,9 @@
 	\fancyhead[RE]{\protect \nouppercase \leftmark}		% even pages on right
 	\fancyhead[LO]{\protect \nouppercase \rightmark}	% odd pages on left
 \else
-	\fancyhead[C]{\protect \nouppercase \rightmark}	
+	\fancyhead[C]{\protect \nouppercase \rightmark}
 \fi
-\fancyfoot[C]{\thepage}	%页脚
+\fancyfoot[C]{\thepage}	% 页脚
 
 % 第一页页码为空
 % \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
@@ -145,7 +146,7 @@
 %\RequirePackage{hypernat}
 \hypersetup
 {
-%	CJKbookmarks		= true,	%会造成章节名中部分汉字冲突
+%	CJKbookmarks		= true,	% 会造成章节名中部分汉字冲突
 %	unicode				= true,	%
 %	pdfstartview		= FitH, %
 	bookmarksnumbered	= true,
@@ -157,8 +158,8 @@
 	pdfpagelabels,
 	pdfborder			= 0 0 0,
 	linkcolor			= black,%
-	urlcolor			= black,%
-	citecolor			= black	%
+	urlcolor			= blue,	%
+	citecolor			= blue	%
 }
 
 % 表格控制
@@ -177,41 +178,43 @@
 \RequirePackage{listings}
 \lstset
 {
-	tabsize				= 4 , %
-	%frame				= shadowbox,		%把代码用带有阴影的框圈起来
-	backgroundcolor		= \color{black!5},	%设置代码背景色
-	commentstyle		= \color{black!100},%浅灰色的注释
-	rulesepcolor		= \color{red!20!green!20!blue!20},	%代码块边框为淡青色
-	keywordstyle		= \color{blue!}\bfseries,	%代码关键字的颜色为蓝色，粗体
-	showstringspaces	= true,			%显示代码字符串中间的空格标记
-	stringstyle			= \ttfamily,	%代码字符串的特殊格式
-	keepspaces			= true,	%
-	breakindent			= 22pt,	%
-	numbers				= left,	%左侧显示行号
-	stepnumber			= 1,	%
-	numberstyle			= \small,	%行号字体用小号
-	basicstyle			= \small,	%
-	showspaces			= false,	%
-	flexiblecolumns		= true,	%
-	breaklines			= true,	%对过长的代码自动换行
-	breakautoindent		= true,	%
-	breakindent			= 4em,	%
-	escapebegin			= \begin{CJK*}{GBK}{kai},	%代码中文支持
-	escapeend			= \end{CJK*},	%代码中文支持
-	aboveskip			= 1em,	%代码块边框
-	fontadjust			= true,	%
-	captionpos			= t,	%
-	framextopmargin		= 2pt,	%
-	framexbottommargin	= 2pt,	%
-	abovecaptionskip	=-3pt,	%
-	belowcaptionskip	= 3pt,	%
-	%xleftmargin		=-1em,	%
-	%xrightmargin		=-1em,	%listing左右的空白
-	%numbersep			=-1em,	%listing数字的样式
-	texcl				= true,	%
-	extendedchars		= false,	%
-	columns				= flexible,	%
-	mathescape			= true	%
+	tabsize				= 4,
+	%frame				= shadowbox,						% 把代码用带有阴影的框圈起来
+	backgroundcolor		= \color{black!5},					% 设置代码背景色
+	commentstyle		= \color{green!40!black},			% 浅灰色的注释
+	rulesepcolor		= \color{red!20!green!20!blue!20},	% 代码块边框为淡青色
+	keywordstyle		= \color{blue!}\bfseries,			% 代码关键字的颜色为蓝色，粗体
+	showstringspaces	= false,							% 显示代码字符串中间的空格标记
+	stringstyle			= \ttfamily,						% 代码字符串的特殊格式
+	keepspaces			= true,								%
+	breakindent			= 22pt,								%
+	numbers				= left,								% 左侧显示行号
+	stepnumber			= 1,								%
+	numberstyle			= \linespread{1.0}\small,							% 行号字体用小号
+	basicstyle			= \linespread{1.0}\small,							%
+	showspaces			= false,							%
+	flexiblecolumns		= true,								%
+	breaklines			= true,								% 对过长的代码自动换行
+	breakautoindent		= true,								%
+	breakindent			= 4em,								%
+	escapebegin			= \begin{CJK*}{GBK}{kai},			% 代码中文支持
+	escapeend			= \end{CJK*},						% 代码中文支持
+	aboveskip			= 1em,								% 代码块边框
+	fontadjust			= true,								%
+	captionpos			= t,								%
+	framextopmargin		= 2pt,								%
+	framexbottommargin	= 2pt,								%
+	abovecaptionskip	=-3pt,								%
+	belowcaptionskip	= 3pt,								%
+	%xleftmargin		=-1em,								%
+	%xrightmargin		=-1em,								% listing左右的空白
+	%numbersep			=-1em,								% listing数字的样式
+	texcl				= true,								%
+	extendedchars		= false,							%
+	columns				= flexible,							%
+	mathescape			= true,								%
+	language			= c++,								% 默认语言为 C++
+	%linespacing				= 0.5
 }
 
 % 下划线自动换行
