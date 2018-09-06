@@ -116,7 +116,7 @@
 \DeclareGraphicsExtensions{.png, .jpg, .gif, .pdf, .eps, .mps}
 \graphicspath{{figure/}}
 
-% gif 图片，ImageMagick 转换成 png
+% gif 图片，https://convertio.co/gif-png/ 转换成 png
 \usepackage{animate}
 % 将 \includegraphics 替换为以下命令
 % \animategraphics
