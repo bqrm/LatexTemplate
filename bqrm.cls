@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.10
+% version:	1.11
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -17,6 +17,7 @@
 % Modified:	2018/07/27, revise header
 % Modified:	2018/07/27, foot of first page of chapter
 % Modified:	2018/08/01, set the linespacing of lstlisting
+% Modified:	2018/09/18, add part of english version
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -214,7 +215,7 @@
 	columns				= flexible,							%
 	mathescape			= true,								%
 	language			= c++,								% 默认语言为 C++
-	%linespacing				= 0.5
+	%linespacing		= 0.5
 }
 
 % 下划线自动换行
@@ -334,6 +335,13 @@
 	\renewcommand\tablename{Table}
 	
 	% 设置章节名格式
+	\CTEXsetup
+	[
+		number		= {\arabic{part}},
+		name		= {Part\:\:},
+		nameformat	= {\bfseries\centering\zihao{-2}},
+		titleformat	= {\bfseries\zihao{-2}},
+	]{part}
 	\CTEXsetup
 	[
 		number		= {\arabic{chapter}},
