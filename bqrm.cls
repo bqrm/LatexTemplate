@@ -185,15 +185,15 @@
 	backgroundcolor		= \color{black!5},					% 设置代码背景色
 	commentstyle		= \color{green!40!black},			% 浅灰色的注释
 	rulesepcolor		= \color{red!20!green!20!blue!20},	% 代码块边框为淡青色
-	keywordstyle		= \color{blue!}\bfseries,			% 代码关键字的颜色为蓝色，粗体
+	keywordstyle		= \color{blue!},					% 代码关键字的颜色为蓝色，粗体
 	showstringspaces	= false,							% 显示代码字符串中间的空格标记
 	stringstyle			= \ttfamily,						% 代码字符串的特殊格式
 	keepspaces			= true,								%
 	breakindent			= 22pt,								%
 	numbers				= left,								% 左侧显示行号
 	stepnumber			= 1,								%
-	numberstyle			= \linespread{1.0}\small,							% 行号字体用小号
-	basicstyle			= \linespread{1.0}\small,							%
+	numberstyle			= \linespread{1.0}\small,			% 行号字体用小号
+	basicstyle			= \linespread{1.0}\small,			%
 	showspaces			= false,							%
 	flexiblecolumns		= true,								%
 	breaklines			= true,								% 对过长的代码自动换行
@@ -217,8 +217,8 @@
 	mathescape			= true,								%
 	language			= c++,								% 默认语言为 C++
 	%linespacing		= 0.5
-	moredelim			= [is][\ttfamily\textbf]{!!!}{!!!},	% other font
-	moredelim			= [is][\color{blue}\textbf]{@@}{@@}	% key word
+	moredelim			= [is][\color{red!60!green!80!blue!90}]{!!}{!!},	% method name
+	moredelim			= [is][\color{red!0!green!40!blue!100}]{@@}{@@}		% key word
 }
 
 % 下划线自动换行
