@@ -217,7 +217,7 @@
 	mathescape			= true,								%
 	language			= c++,								% 默认语言为 C++
 	%linespacing		= 0.5
-	moredelim			= [is][\ttfamily\textbf]{|}{|},		% other font
+	moredelim			= [is][\ttfamily\textbf]{!!!}{!!!},	% other font
 	moredelim			= [is][\color{blue}\textbf]{@@}{@@}	% key word
 }
 
