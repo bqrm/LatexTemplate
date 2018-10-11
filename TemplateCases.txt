@@ -1,4 +1,4 @@
-{\color{blue}{\emph{  }}}
+{\color{blue}{\emph{}}}
 
  $$ 
 
@@ -6,6 +6,15 @@
 \begin{aligned}
 \end{aligned}
 \end{equation}
+
+\begin{figure}[h]
+\centering
+\addtolength{\leftskip}{-2cm}
+\addtolength{\rightskip}{-2cm}
+\includegraphics[width=15em]{.png}
+\caption{}
+\label{figure:}
+\end{figure}
 
 \begin{itemize}
 \item 
@@ -30,3 +39,7 @@
 
 \begin{cases}
 \end{cases}
+
+language={python}, moredelim = {[is][\color{blue}]{!!}{!!}}
+\begin{lstlisting}[caption={}, label={}]
+\end{lstlisting}
