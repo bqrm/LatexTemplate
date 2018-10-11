@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.11
+% version:	1.12
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -18,6 +18,7 @@
 % Modified:	2018/07/27, foot of first page of chapter
 % Modified:	2018/08/01, set the linespacing of lstlisting
 % Modified:	2018/09/18, add part of english version
+% Modified:	2018/10/11, add moredelim for lstlisting
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -216,6 +217,8 @@
 	mathescape			= true,								%
 	language			= c++,								% 默认语言为 C++
 	%linespacing		= 0.5
+	moredelim			= [is][\ttfamily\textbf]{|}{|},		% other font
+	moredelim			= [is][\color{blue}\textbf]{@@}{@@}	% key word
 }
 
 % 下划线自动换行
