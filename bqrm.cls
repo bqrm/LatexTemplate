@@ -1,9 +1,9 @@
 %
 % this file 'bqrm.cls' defines the detailed parameters of the template
-% compiled on MikTeX-2.9-X86, using 'pdfLaTeX+MakeIndex+BibTex'
+% compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.12
+% version:	1.13
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -19,6 +19,7 @@
 % Modified:	2018/08/01, set the linespacing of lstlisting
 % Modified:	2018/09/18, add part of english version
 % Modified:	2018/10/11, add moredelim for lstlisting
+% Modified:	2018/11/05, set linespacing of lstlisting block
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -201,7 +202,8 @@
 	breakindent			= 4em,								%
 	escapebegin			= \begin{CJK*}{GBK}{kai},			% 代码中文支持
 	escapeend			= \end{CJK*},						% 代码中文支持
-	aboveskip			= 1em,								% 代码块边框
+	aboveskip			= -1em,								% 代码块上边缘行距
+	belowskip			= 1em,								% 代码块下边缘行距
 	fontadjust			= true,								%
 	captionpos			= t,								%
 	framextopmargin		= 2pt,								%
@@ -218,7 +220,7 @@
 	language			= c++,								% 默认语言为 C++
 	%linespacing		= 0.5
 	moredelim			= [is][\color{red!60!green!80!blue!90}]{!!}{!!},	% method name
-	moredelim			= [is][\color{red!0!green!40!blue!100}]{@@}{@@}		% key word
+	moredelim			= [is][\color{red!0!green!45!blue!100}]{@@}{@@}		% key word
 }
 
 % 下划线自动换行
