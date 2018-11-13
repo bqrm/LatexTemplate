@@ -5,15 +5,16 @@
 %  - iscommented：	是否显示有可能的批注，如需要“commented”
 % 
 % 
-% version:	1.4
+% version:	1.5
 % 
 % Create:	2017/07/20
 % Modified:	2017/09/29
 % Modified:	2018/04/05
 % Modified:	2018/05/14, add watermark
 % Modified:	2018/07/04, adjust watermark and add introduction before table of contents
+% Modified:	2018/11/13, add length between paragraph
 % 
-% Copyright(C) 2017 bqrmtao@qq.com
+% Copyright(C) 2017-2018 bqrmtao@qq.com
 % 
 
 \documentclass[oneside, zh, commented]{bqrm}
@@ -39,6 +40,9 @@
 
 % 正文开始
 \mainmatter
+
+% 段间距
+\setlength{\parskip}{0.5em}
 
 % 此处添加正文章节
 \include{body/Ch01}
