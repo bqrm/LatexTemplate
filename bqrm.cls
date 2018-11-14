@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.14
+% version:	1.13
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -20,7 +20,6 @@
 % Modified:	2018/09/18, add part of english version
 % Modified:	2018/10/11, add moredelim for lstlisting
 % Modified:	2018/11/05, set linespacing of lstlisting block
-% Modified:	2018/11/13, no indent in English paragraph
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -310,9 +309,6 @@
 \else
 % 定制英文文档的相关变化
 	\renewcommand\contentsname{Contents}
-	
-	% 段首缩进
-	\setlength{\parindent}{0pt}
 	
 	% 定公式、图、表编号为"1.1"的形式，子图和子表的应用序号外加小括号，1.1(a)
 	\renewcommand\theequation{\arabic{chapter}.\arabic{equation}}
