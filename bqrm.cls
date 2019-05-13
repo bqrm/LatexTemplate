@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.13
+% version:	1.14
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -20,6 +20,7 @@
 % Modified:	2018/09/18, add part of english version
 % Modified:	2018/10/11, add moredelim for lstlisting
 % Modified:	2018/11/05, set linespacing of lstlisting block
+% Modified:	2019/05/13, bold mode of character in equation
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -175,7 +176,7 @@
 \RequirePackage{tabularx}
 
 % assumption
-\RequirePackage{amsmath,amssymb}
+\RequirePackage{amsmath, amssymb, bm}
 
 % 代码宏包
 \RequirePackage{listings}
