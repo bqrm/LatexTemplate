@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.14
+% version:	1.15
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -21,6 +21,7 @@
 % Modified:	2018/10/11, add moredelim for lstlisting
 % Modified:	2018/11/05, set linespacing of lstlisting block
 % Modified:	2019/05/13, bold mode of character in equation
+% Modified:	2019/05/27, set above space of lstlisting
 % 
 % Copyright(C) 2017-2018 bqrmtao@qq.com
 %
@@ -203,8 +204,8 @@
 	breakindent			= 4em,								%
 	escapebegin			= \begin{CJK*}{GBK}{kai},			% 代码中文支持
 	escapeend			= \end{CJK*},						% 代码中文支持
-	aboveskip			= -1em,								% 代码块上边缘行距
-	belowskip			= 1em,								% 代码块下边缘行距
+	aboveskip			= 0.4em,							% 代码块上边缘行距
+	belowskip			= 0.4em,							% 代码块下边缘行距
 	fontadjust			= true,								%
 	captionpos			= t,								%
 	framextopmargin		= 2pt,								%
