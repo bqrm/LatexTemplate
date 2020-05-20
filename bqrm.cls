@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.15
+% version:	1.17
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -22,8 +22,9 @@
 % Modified:	2018/11/05, set linespacing of lstlisting block
 % Modified:	2019/05/13, bold mode of character in equation
 % Modified:	2019/05/27, set above space of lstlisting
+% Modified: 2020/05/20, update parameters of depth of content
 % 
-% Copyright(C) 2017-2018 bqrmtao@qq.com
+% Copyright(C) 2017-2020 bqrmtao@qq.com
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -92,11 +93,24 @@
 % 					\@afterindentfalse
 % 					\secdef\@chapter\@schapter}
 
+% 目录深度示意
+% num	mean
+% -1	part
+%  0	chapter
+%  1	section
+%  2	subsection
+%  3	subsubsection
+%  4	paragraph
+%  5	subparagraph
+
 % 设定目录格式
 \RequirePackage{titletoc}
 
-% 设置目录深度
+% 目录编号深度
 \setcounter{secnumdepth}{4}
+
+% 目录显示深度
+\setcounter{tocdepth}{4}
 
 % 文字加阴影
 \RequirePackage{framed}
@@ -121,7 +135,7 @@
 \DeclareGraphicsExtensions{.png, .jpg, .gif, .pdf, .eps, .mps}
 \graphicspath{{figure/}}
 
-% gif 图片，https://convertio.co/gif-png/ 转换成 png
+% gif 图片，ImageMagick 转换成 png
 \usepackage{animate}
 % 将 \includegraphics 替换为以下命令
 % \animategraphics
@@ -175,6 +189,7 @@
 
 % tabularx 需要在 hyperref 之后引入才不会使正文的 footnote 的超链接失效
 \RequirePackage{tabularx}
+\RequirePackage{makecell}
 
 % assumption
 \RequirePackage{amsmath, amssymb, bm}
@@ -477,6 +492,8 @@
 {
 	\@sc@wm@stampfalse
 }
+
+%\renewcommand{\arraystretch}{1.2}
 
 % 自定义宏包
 \RequirePackage{bqrm}
