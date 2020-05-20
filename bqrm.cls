@@ -110,7 +110,7 @@
 \setcounter{secnumdepth}{4}
 
 % 目录显示深度
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{2}
 
 % 文字加阴影
 \RequirePackage{framed}
