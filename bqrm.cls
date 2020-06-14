@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.17
+% version:	1.18
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -22,7 +22,8 @@
 % Modified:	2018/11/05, set linespacing of lstlisting block
 % Modified:	2019/05/13, bold mode of character in equation
 % Modified:	2019/05/27, set above space of lstlisting
-% Modified: 2020/05/20, update parameters of depth of content
+% Modified:	2020/05/20, update parameters of depth of content
+% Modified:	2020/06/13, add new command of \qd as colored emphasize
 % 
 % Copyright(C) 2017-2020 bqrmtao@qq.com
 %
@@ -476,6 +477,9 @@
 	topsep		= 5pt	% 整个结构与上一行的距离
 }
 
+% 扩展公式字符
+\RequirePackage{textcomp}
+
 \RequirePackage{draftwatermark}
 \SetWatermarkText{BQRM}
 \SetWatermarkLightness{0.95}
@@ -492,6 +496,9 @@
 {
 	\@sc@wm@stampfalse
 }
+
+% 强调，默认蓝色
+\newcommand\qd[2][blue]{{\color{#1}{\emph{#2}}}}
 
 %\renewcommand{\arraystretch}{1.2}
 
