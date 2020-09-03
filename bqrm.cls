@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.19
+% version:	1.20
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -25,8 +25,9 @@
 % Modified:	2020/05/20, update parameters of depth of content
 % Modified:	2020/06/13, add new command of \qd as colored emphasize
 % Modified:	2020/06/30, add new command of \nt as noindent and textbf
+% Modified:	2020/09/03, add new command of \np as newpage and \tb as textbf
 % 
-% Copyright(C) 2017-2020 bqrmtao@qq.com
+% Copyright(C) 2017- bqrmtao@qq.com
 %
 
 \NeedsTeXFormat{LaTeX2e}[2017/09/29]
@@ -498,11 +499,17 @@
 	\@sc@wm@stampfalse
 }
 
-% 强调，默认蓝色
-\newcommand\qd[2][blue]{{\color{#1}{\emph{#2}}}}
-
 % 粗体、顶格
 \newcommand\nt[1]{{\noindent\textbf{#1}}}
+
+% 换页
+\newcommand\np{{\newpage}}
+
+% 强调，默认蓝色
+\newcommand\qd[2][red]{{\color{#1}{\emph{#2}}}}
+
+% 粗体
+\newcommand\tb[1]{{\textbf{#1}}}
 
 %\renewcommand{\arraystretch}{1.2}
 
