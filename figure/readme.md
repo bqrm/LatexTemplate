@@ -1,4 +1,4 @@
-# readme
+# figure folder
 
 all figures should be put here
 
