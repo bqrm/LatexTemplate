@@ -1,22 +1,6 @@
-{\color{blue}{\emph{}}}
-
- $$ 
-
-\begin{equation}
-\begin{aligned}
-\end{aligned}
-\end{equation}
-
-\begin{figure}[h]
-\centering
-\addtolength{\leftskip}{-2cm}
-\addtolength{\rightskip}{-2cm}
-\includegraphics[width=15em]{.png}
-\caption{}
-\label{figure:}
-\end{figure}
-
 \begin{itemize}
+\item 
+\item 
 \item 
 \item 
 \item 
@@ -26,7 +10,18 @@
 \item 
 \item 
 \item 
+\item 
+\item 
 \end{enumerate}
+
+\begin{equation}
+\begin{aligned}
+\end{aligned}
+\end{equation}
+
+ $$ 
+
+\dfrac{\partial }{\partial }
 
 \begin{pmatrix}
 \end{pmatrix}
@@ -39,6 +34,34 @@
 
 \begin{cases}
 \end{cases}
+
+\begin{figure}[h]
+\centering
+\addtolength{\leftskip}{-2cm}
+\addtolength{\rightskip}{-2cm}
+\includegraphics[height=15em]{.png}
+\caption{}
+\label{figure:}
+\end{figure}
+
+\begin{longtable}[c]{c|c|c}
+\caption{}\label{table:}\\
+\toprule[1.5pt]
+a & b & c\\
+\endfirsthead
+%\multicolumn{3}{c}{续表~\thetable\hskip 1em binary operators}\\
+\toprule[1.5pt]
+a & b & c\\
+\endhead
+\multicolumn{3}{r}{continued on next page}
+\endfoot
+\endlastfoot
+\midrule[1.5pt]
+1 & 100 & 200\\
+\hline
+2 & 200 & 300\\
+\bottomrule[1.5pt]
+\end{longtable}
 
 language={python}, moredelim = {[is][\color{blue}]{!!}{!!}}
 \begin{lstlisting}[caption={}, label={}]
