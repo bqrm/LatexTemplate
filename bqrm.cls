@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.20
+% version:	1.21
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -26,6 +26,7 @@
 % Modified:	2020/06/13, add new command of \qd as colored emphasize
 % Modified:	2020/06/30, add new command of \nt as noindent and textbf
 % Modified:	2020/09/03, add new command of \np as newpage and \tb as textbf
+% Modified:	2021/01/12, modify setenumerate, setitemize and setdescription
 % 
 % Copyright(C) 2017- bqrmtao@qq.com
 %
@@ -457,26 +458,44 @@
 	\fi
 }
 
-% 
+% https://chenzhen.blog.csdn.net/article/details/83179571
 \RequirePackage{enumerate}
 \RequirePackage{enumitem}
-\setenumerate[1]
+\setenumerate
 {
-	partopsep	= 0pt,	% 好像无效
-	parsep		= 0pt,	% item 之间的间隔
-	topsep		= 5pt	% 整个结构与上一行的距离
+	topsep			= 5pt,	% 整个结构与上一行的距离
+	partopsep		= 0pt,	% topsep的补充
+	parsep			= 0pt,	% 结构内，额外段间距
+%	leftmargin		= 50pt,	% 距最左额外间隔
+%	rightmargin		= 50pt,	% 距最右额外间隔
+	labelsep		= 12pt,	% 标识符向左距离
+%	labelwidth		= 12pt,	%
+	itemindent		= 12pt,	% item段落的缩进
+	listparindent	= 12pt,	% item内部新段落的缩进
 }
-\setitemize[1]
+\setitemize
 {
-	partopsep	= 0pt,	% 好像无效
-	parsep		= 0pt,	% item 之间的间隔
-	topsep		= 5pt	% 整个结构与上一行的距离
+	topsep			= 5pt,	% 整个结构与上一行的距离
+	partopsep		= 0pt,	% topsep的补充
+	parsep			= 0pt,	% 结构内，额外段间距
+%	leftmargin		= 50pt,	% 距最左额外间隔
+%	rightmargin		= 50pt,	% 距最右额外间隔
+	labelsep		= 12pt,	% 标识符向左距离
+%	labelwidth		= 12pt,	%
+	itemindent		= 12pt,	% item段落的缩进
+	listparindent	= 12pt,	% item内部新段落的缩进
 }
 \setdescription
 {
-	partopsep	= 0pt,	% 好像无效
-	parsep		= 0pt,	% item 之间的间隔
-	topsep		= 5pt	% 整个结构与上一行的距离
+	topsep			= 5pt,	% 整个结构与上一行的距离
+	partopsep		= 0pt,	% topsep的补充
+	parsep			= 0pt,	% 结构内，额外段间距
+%	leftmargin		= 50pt,	% 距最左额外间隔
+%	rightmargin		= 50pt,	% 距最右额外间隔
+	labelsep		= 12pt,	% 标识符向左距离
+%	labelwidth		= 12pt,	%
+	itemindent		= 12pt,	% item段落的缩进
+	listparindent	= 12pt,	% item内部新段落的缩进
 }
 
 % 扩展公式字符
