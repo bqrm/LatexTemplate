@@ -3,7 +3,7 @@
 % compiled on MikTeX-2.9, using 'pdfLaTeX+MakeIndex+BibTex'
 % 
 % 
-% version:	1.21
+% version:	1.22
 %
 % Create:	2017/07/20
 % Modified:	2017/09/29
@@ -27,6 +27,7 @@
 % Modified:	2020/06/30, add new command of \nt as noindent and textbf
 % Modified:	2020/09/03, add new command of \np as newpage and \tb as textbf
 % Modified:	2021/01/12, modify setenumerate, setitemize and setdescription
+% Modified:	2021/01/14, modify setenumerate, setitemize and setdescription
 % 
 % Copyright(C) 2017- bqrmtao@qq.com
 %
@@ -468,10 +469,10 @@
 	parsep			= 0pt,	% 结构内，额外段间距
 %	leftmargin		= 50pt,	% 距最左额外间隔
 %	rightmargin		= 50pt,	% 距最右额外间隔
-	labelsep		= 12pt,	% 标识符向左距离
+%	labelsep		= 12pt,	% 标识符向左距离
 %	labelwidth		= 12pt,	%
-	itemindent		= 12pt,	% item段落的缩进
-	listparindent	= 12pt,	% item内部新段落的缩进
+%	itemindent		= 12pt,	% item段落的缩进
+%	listparindent	= 12pt,	% item内部新段落的缩进
 }
 \setitemize
 {
@@ -480,10 +481,10 @@
 	parsep			= 0pt,	% 结构内，额外段间距
 %	leftmargin		= 50pt,	% 距最左额外间隔
 %	rightmargin		= 50pt,	% 距最右额外间隔
-	labelsep		= 12pt,	% 标识符向左距离
+%	labelsep		= 12pt,	% 标识符向左距离
 %	labelwidth		= 12pt,	%
-	itemindent		= 12pt,	% item段落的缩进
-	listparindent	= 12pt,	% item内部新段落的缩进
+%	itemindent		= 12pt,	% item段落的缩进
+%	listparindent	= 12pt,	% item内部新段落的缩进
 }
 \setdescription
 {
@@ -492,10 +493,10 @@
 	parsep			= 0pt,	% 结构内，额外段间距
 %	leftmargin		= 50pt,	% 距最左额外间隔
 %	rightmargin		= 50pt,	% 距最右额外间隔
-	labelsep		= 12pt,	% 标识符向左距离
+%	labelsep		= 12pt,	% 标识符向左距离
 %	labelwidth		= 12pt,	%
-	itemindent		= 12pt,	% item段落的缩进
-	listparindent	= 12pt,	% item内部新段落的缩进
+%	itemindent		= 12pt,	% item段落的缩进
+%	listparindent	= 12pt,	% item内部新段落的缩进
 }
 
 % 扩展公式字符

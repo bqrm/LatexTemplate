@@ -45,7 +45,9 @@
 \setlength{\parskip}{0.5em}
 
 % 此处添加正文章节
-\include{body/Ch01}
+\include{body/template-information}
+\include{body/main-content}
+\include{body/china}
 % 正文章节结束
 
 % 附录开始
@@ -55,13 +57,12 @@
 \changeappendexchapternumber
 
 % 此处添加附录
-%\include{body/appendix01}
+\include{body/engorg}
+\include{body/foreign-files}
+\include{body/other-appendix}
 
 \end{appendix}
 % 附录结束
-
-% 取消水印
-\WatermarkOff
 
 % 通常在 CJK 中文解决方案中加一个 \clearpage 在环境末尾
 \clearpage

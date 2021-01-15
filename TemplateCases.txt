@@ -49,7 +49,7 @@
 \toprule[1.5pt]
 a & b & c\\
 \endfirsthead
-%\multicolumn{3}{c}{ç»­è¡¨~\thetable\hskip 1em binary operators}\\
+%\multicolumn{3}{c}{Ðø±í~\thetable\hskip 1em binary operators}\\
 \toprule[1.5pt]
 a & b & c\\
 \endhead
